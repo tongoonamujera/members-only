@@ -4,25 +4,45 @@
   <%= render "devise/shared/error_messages", resource: resource %>
 
   <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    <%= f.label :email, class:"label" %>
+    <div class="control">
+      <%= f.email_field :email, autofocus: true, autocomplete: "email", class:"input" %>
+    </div>
   </div>
 
   <div class="field">
-    <%= f.label :password %>
+    <%= f.label :password, class:"label" %>
     <% if @minimum_password_length %>
     <em>(<%= @minimum_password_length %> characters minimum)</em>
     <% end %><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
+    <div class="control">
+      <%= f.password_field :password, autocomplete: "new-password", class:"input" %>
+    </div>
   </div>
 
   <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+    <%= f.label :password_confirmation, class:"label" %>
+    <div class="control">
+      <%= f.password_field :password_confirmation, autocomplete: "new-password", class:"input" %>
+    </div>
+  </div>
+
+  <div class="field">
+    <%= f.label :username, class:"label" %>
+    <div class="control">
+    <%= f.text_field :username, autocomplete: "username", class:"input" %>
+    </div>
+  </div>
+
+  <div class="field">
+    <%= f.label :image, class:"label" %>
+    <div class="control">
+      <%= f.file_field :image, autocomplete: "image", class:"input" %>
+    </div>
   </div>
 
   <div class="actions">
-    <%= f.submit "Sign up" %>
+    <%= f.submit "Sign up", class:"button is-success" %>
   </div>
 <% end %>
 
