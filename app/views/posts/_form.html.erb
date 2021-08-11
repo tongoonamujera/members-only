@@ -12,26 +12,34 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title %>
+    <%= form.label :title, class:"label" %>
+    <div class="control">
+      <%= form.text_field :title, class:"input" %>
+    </div>
   </div>
 
   <div class="field">
-    <%= form.label :body %>
-    <%= form.text_area :body %>
+    <%= form.label :body, class:"label"  %>
+    <div class="control">
+      <%= form.text_area :body, class:"input" %>
+    </div>
   </div>
 
   <div class="field">
-    <%= form.label :image %>
-    <%= form.text_field :image %>
+    <%= form.label :image, class:"label" %>
+    <div class="control">
+      <%= form.file_field :image, class:"input" %>
+    </div>
   </div>
 
   <div class="field">
-    <%= form.label :user_id %>
-    <%= form.text_field :user_id %>
+    <%= form.label :user_id, class:"label" %>
+    <div class="control">
+      <%= form.text_field :user_id, class:"input" %>
+    </div>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit class:"button is-info" %>
   </div>
 <% end %>
