@@ -4,7 +4,7 @@ class PostsControllerTest < ActionDispatch::IntegrationTest
   setup do
     @post = posts(:one)
   end
-
+#rubocop:disable all
   test "should get index" do
     get posts_url
     assert_response :success
