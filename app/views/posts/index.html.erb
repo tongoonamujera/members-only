@@ -10,7 +10,9 @@
         <div class="card-content">
           <div class="content">
             <%= post.body %><br>
-            <%= post.image %><br>
+            <div>
+              <img src="<%= post.image %>"/>
+            </div>
             <p>
             Posted by:
               <%= post.user.username.capitalize %>

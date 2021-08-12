@@ -13,14 +13,13 @@
             <%= @post.body %>
           </p>
 
-          <p>
-            <strong>Image:</strong>
-            <%= @post.image %>
-          </p>
+          <div>
+            <img src="<%= @post.image %>"/>
+          </div>
 
-          <p>
-            <strong>User:</strong>
-            <%= @post.user_id %>
+          <p class="has-text-centered">
+          Post Created by:
+          <strong><i><%= @post.user.username.capitalize %></i></strong>
           </p>
         </div>
       </div>
