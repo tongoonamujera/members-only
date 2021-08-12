@@ -1,0 +1,42 @@
+<p id="notice"><%= notice %></p>
+
+<div class="columns is-centered">
+  <div class="column is-9">
+    <% @posts.each do |post| %>
+      <div class="card my-5">
+        <header class="card-header">
+          <p class="has-text-centered">
+            <%= post.title %>
+          </p>
+        </header>
+        <div class="card-content">
+          <div class="content">
+            <%= post.body %><br>
+            <div>
+              <img src="<%= post.image %>"/>
+            </div>
+            <% if user_signed_in? %>
+              <p>
+              Posted by:
+                <%= post.user.username.capitalize %>
+              </p>
+            <% end %>
+          </div>
+        </div>
+        <footer class="card-footer">
+          <div class="card-footer-item">
+            <%= link_to 'Show', post, class:"button is-success" %>
+          </div>
+          <div class="card-footer-item">
+            <%= link_to 'Edit', edit_post_path(post), class:"button is-success" %>
+          </div>
+          <div class="card-footer-item">
+            <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' }, class:"button is-danger" %>
+          </div>
+        </footer>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+<%= link_to 'New Post', new_post_path, class:"button is-success" %>

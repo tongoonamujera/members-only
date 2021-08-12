@@ -1,0 +1,36 @@
+<p id="notice"><%= notice %></p>
+
+<div class="columns is-centered">
+  <div class="column is-9">
+    <div class="card">
+    <header class="card-header">
+      <%= @post.title %>
+    </header>
+      <div class="card-content">
+        <div class="content">
+          <p>
+            <strong>Body:</strong>
+            <%= @post.body %>
+          </p>
+
+          <div>
+            <img src="<%= @post.image %>"/>
+          </div>
+
+          <p class="has-text-centered">
+          Post Created by:
+          <strong><i><%= @post.user.username.capitalize %></i></strong>
+          </p>
+        </div>
+      </div>
+      <footer class="card-footer">
+        <div class="card-footer-item">
+          <%= link_to 'Edit', edit_post_path(@post), class:"button is-success" %>
+        </div>
+        <div class="card-footer-item">
+          <%= link_to 'Back', posts_path, class:"button is-dark" %>
+        </div>
+      </footer>
+    </div>
+  </div>
+</div>
