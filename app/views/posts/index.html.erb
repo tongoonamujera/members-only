@@ -15,10 +15,12 @@
             <div>
               <img src="<%= post.image %>"/>
             </div>
-            <p>
-            Posted by:
-              <%= post.user.username.capitalize %>
-            </p>
+            <% if user_signed_in? %>
+              <p>
+              Posted by:
+                <%= post.user.username.capitalize %>
+              </p>
+            <% end %>
           </div>
         </div>
         <footer class="card-footer">
