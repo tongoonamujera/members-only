@@ -63,7 +63,12 @@
   <div class="hero-body">
     <div class="container has-text-centered">
         <p>
-        Hello <%= current_user.username.capitalize %>
+        Hello 
+        <% if user_signed_in? %>
+          <%= current_user.username.capitalize %>
+        <% else %>
+          <span>Guest User</span>
+        <% end %>
         </p>
       <p class="subtitle">
         subtitle
