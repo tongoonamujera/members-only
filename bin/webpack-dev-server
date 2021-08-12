@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
-
+#rubocop:disable all
 ENV["RAILS_ENV"] ||= ENV["RACK_ENV"] || "development"
 ENV["NODE_ENV"]  ||= "development"
 
