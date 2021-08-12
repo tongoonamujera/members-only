@@ -1,4 +1,5 @@
-require "application_system_test_case"
+require 'application_system_test_case'
+#rubocop:disable all
 
 class PostsTest < ApplicationSystemTestCase
   setup do
